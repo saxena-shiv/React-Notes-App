@@ -60,7 +60,7 @@ function Form() {
 
     return (
         <>
-            <div className="border-2 flex absolute items-center justify-center h-full w-full border-zinc-50 p-24 bg-zinc-100/30 relative rounded-3xl">
+            <div className="border-2 flex items-center justify-center h-full w-full border-zinc-50 p-24 bg-zinc-100/30 relative rounded-3xl">
                 <Close />
 
                 <form onSubmit={handleSubmit} className='flex items-start text-xl justify-center flex-col gap-5'>
