@@ -7,7 +7,7 @@ function Form() {
     const year = new Date().getFullYear();
     const fullDate = `${date}/${month + 1}/${year}`;
     const farFutureDate = new Date('2038-01-01T00:00:00Z');
-    document.cookie == null ? (document.cookie =  `i = 0; expires = ${farFutureDate.toUTCString()}; priority = high`): null;
+    document.cookie === null ? (document.cookie =  `i = 0; expires = ${farFutureDate.toUTCString()}; priority = high`): null;
     i = document.cookie.split("=")[1];
     i = parseInt(i);
     const [formData, setFormData] = useState({
