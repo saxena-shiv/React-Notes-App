@@ -45,7 +45,7 @@ function Foreground() {
                         <Card key={index} cont={item} reference={ref} />
                     ))
                 }
-                <div  className='h-full w-full absolute ' id="form">
+                <div  className='h-full -m-10 w-full absolute ' id="form">
                     <Form />
                 </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Close from './Close'
 function Form() {
     let i;
@@ -7,14 +7,14 @@ function Form() {
     const year = new Date().getFullYear();
     const fullDate = `${date}/${month + 1}/${year}`;
     const farFutureDate = new Date('2038-01-01T00:00:00Z');
-    document.cookie == null ? (document.cookie =  `i = 0; expires = ${farFutureDate.toUTCString()}; priority = high`): null;
+    // document.cookie == null ? (document.cookie =  `i = 0; expires = ${farFutureDate.toUTCString()}; priority = high`): null;
     i = document.cookie.split("=")[1];
     i = parseInt(i);
     const [formData, setFormData] = useState({
         desc: '',
         date: fullDate,
         close: true,
-        key: i+1,
+        key: i + 1,
         tag: {
             tagTitle: "Delete Note",
             isOpen: true,
@@ -66,7 +66,7 @@ function Form() {
                 <form onSubmit={handleSubmit} className='flex items-start text-xl justify-center flex-col gap-5'>
                     <label className='w-full'>
                         Note:
-                        <br/>
+                        <br />
                         <textarea
                             className='my-2 outline-none resize-none font-sans p-2 text-black w-full rounded-md h-32'
                             type="text"
@@ -95,7 +95,7 @@ function Form() {
                                         value="bg-[#9E58DC]"
                                         checked={selectedTagColor === 'bg-[#9E58DC]'}
                                         onChange={() => handleRadiobutton('bg-[#9E58DC]')}
-                                        
+
                                     />
                                 </label>
                             </div>
@@ -109,7 +109,7 @@ function Form() {
                                         value="bg-[#4BC071]"
                                         checked={selectedTagColor === 'bg-[#4BC071]'}
                                         onChange={() => handleRadiobutton('bg-[#4BC071]')}
-                                        
+
                                     />
                                 </label>
                             </div>
@@ -123,7 +123,7 @@ function Form() {
                                         value="bg-[#888888]"
                                         checked={selectedTagColor === 'bg-[#888888]'}
                                         onChange={() => handleRadiobutton('bg-[#888888]')}
-                                        
+
                                     />
                                 </label>
                             </div>

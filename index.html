@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docx. App</title>
   </head>
-  <body>
+  <body onload="cookie()">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>   
+      const cookie = () => {
+        if (document.cookie != '')
+        {
+          document.cookie = document.cookie =  `i = 0; expires = ${farFutureDate.toUTCString()}; priority = high`;
+        }
+      }
+    </script>
   </body>
 </html>
